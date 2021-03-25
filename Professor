@@ -1,0 +1,41 @@
+package l5;
+
+public class Professor extends Pessoa implements Autentificacao{
+    
+    //Atributos
+    private String titulacao;
+    private int siape;
+    
+    //Método Construtor
+    public Professor(String nome, String titulacao, int siape){
+        super.setNome(nome);
+        this.titulacao = titulacao;
+        this.siape = siape;}
+    
+    //Getters e Setters
+    public String getTitulacao() {
+        return titulacao;}
+    public void setTitulacao(String titulacao) {
+        this.titulacao = titulacao;}
+    public int getSiape() {
+        return siape;}
+    public void setSiape(int siape) {
+        this.siape = siape;}
+    
+    //Métodos toString
+    @Override
+    public String toString() {
+        return "Professor{" + "titulacao=" + titulacao + ", siape=" + siape + '}';}
+    
+    //Métodos complementares
+    @Override
+    public double calcRefeicao(){
+        return 10;}
+    
+    @Override
+    public void login(String user, String senha){
+        System.out.println("Bem-vindo Professor " + user);}
+    
+    
+    
+}
